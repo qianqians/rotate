@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de",
+  "files": [],
+  "subMetas": {
+    "fb329": {
+      "importer": "gltf-mesh",
+      "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@fb329",
+      "displayName": "",
+      "id": "fb329",
+      "name": "Sphere001.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "df7df": {
+      "importer": "gltf-embeded-image",
+      "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@df7df",
+      "displayName": "",
+      "id": "df7df",
+      "name": "贴图 #1.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "a96a6": {
+      "importer": "texture",
+      "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@a96a6",
+      "displayName": "",
+      "id": "a96a6",
+      "name": "贴图 #1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@df7df"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "958b3": {
+      "importer": "gltf-material",
+      "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@958b3",
+      "displayName": "",
+      "id": "958b3",
+      "name": "Material #1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "28cd4": {
+      "importer": "gltf-scene",
+      "uuid": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@28cd4",
+      "displayName": "",
+      "id": "28cd4",
+      "name": "apple.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "贴图 #1",
+        "uri": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@df7df"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "c429cd80-3e34-4e65-ba5f-96833b7ca7de@28cd4",
+    "assetFinder": {
+      "meshes": [
+        "c429cd80-3e34-4e65-ba5f-96833b7ca7de@fb329"
+      ],
+      "skeletons": [],
+      "textures": [
+        "c429cd80-3e34-4e65-ba5f-96833b7ca7de@a96a6"
+      ],
+      "materials": [
+        "c429cd80-3e34-4e65-ba5f-96833b7ca7de@958b3"
+      ],
+      "scenes": [
+        "c429cd80-3e34-4e65-ba5f-96833b7ca7de@28cd4"
+      ]
+    }
+  }
+}
