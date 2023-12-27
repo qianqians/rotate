@@ -69,6 +69,8 @@ export class main extends Component {
 
         let newPositions = new Float32Array(indices.length * 3);
         let newNormals = new Float32Array(indices.length * 3);
+        let newUVs = new Float32Array(indices.length * 3);
+        let newTangents = new Float32Array(indices.length * 3);
         let minPos = new Vec3(Infinity, Infinity, Infinity);
         let maxPos = new Vec3(-Infinity, -Infinity, -Infinity);
         let newPos = new Vec3();
@@ -77,8 +79,10 @@ export class main extends Component {
             for (let k = 0; k < 3; k++) {
                 newPositions[i * 3 + k] = positions[index * 3 + k];
                 newNormals[i * 3 + k] = normals[index * 3 + k];
+                newUVs[i * 3 + k] = uv[index * 3 + k];
+                newTangents[i * 3 + k] = tangent[index * 3 + k];
             }
-            //newPositions[i * 3 + 2] = newPositions[i * 3 + 2] + random() * 10;
+            newPositions[i * 3 + 2] = newPositions[i * 3 + 2] + random();
 
             newPos.set(newPositions[i * 3], newPositions[i * 3 + 1], newPositions[i * 3 + 2]);
             Vec3.min(minPos, minPos, newPos);
@@ -88,16 +92,22 @@ export class main extends Component {
         let geometry: primitives.IDynamicGeometry = {
             positions: newPositions,
             normals: newNormals,
-            //uvs: uv,
-            //tangents: tangent,
+            uvs: newUVs,
+            tangents: newTangents,
             minPos: minPos,
             maxPos: maxPos,
         }
-        const mesh = utils.MeshUtils.createDynamicMesh(0, geometry);
+        let opt: primitives.ICreateDynamicMeshOptions = {
+            maxSubMeshes: 1,
+            maxSubMeshVertices: indices.length,
+            maxSubMeshIndices: indices.length,
+        }
+        let mesh = new Mesh();
+        mesh = utils.MeshUtils.createDynamicMesh(0, geometry, mesh, opt);
 
         let rt = this.model.getComponent(MeshRenderer);
         rt.mesh = mesh;
-        this.model.setRotationFromEuler(new Vec3(random()*5, random()*5, random()*5))
+        this.model.setRotationFromEuler(new Vec3(random(), random(), random()))
     }
 
     update(deltaTime: number) {
