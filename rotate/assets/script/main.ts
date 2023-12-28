@@ -58,6 +58,10 @@ export class main extends Component {
         });
     } 
 
+    private randmonMinMax(min:number, max:number) {
+        return random()*(max-min) - min
+    }
+
     async start() {
         let apple = await this.loadMeshFromBundle("model", "apple/Sphere001");
         
@@ -82,7 +86,7 @@ export class main extends Component {
                 newUVs[i * 3 + k] = uv[index * 3 + k];
                 newTangents[i * 3 + k] = tangent[index * 3 + k];
             }
-            newPositions[i * 3 + 2] = newPositions[i * 3 + 2] + random();
+            newPositions[i * 3 + 2] = newPositions[i * 3 + 2] + this.randmonMinMax(-1 , 1);
 
             newPos.set(newPositions[i * 3], newPositions[i * 3 + 1], newPositions[i * 3 + 2]);
             Vec3.min(minPos, minPos, newPos);
